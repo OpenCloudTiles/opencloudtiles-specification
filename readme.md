@@ -30,15 +30,28 @@ The file is composed of several parts:
 | 54     | 8      | u64    | `length` of `block_index`        |
 
 ### `tile_format` values:
-  - `0`: png
-  - `1`: jpg
-  - `2`: webp
-  - `16`: pbf
+
+| value  | format          | mime-type                  |
+| ------ | --------------- | -------------------------- |
+| `0`    | png             | `image/png`                |
+| `1`    | jpg             | `image/jpeg`               |
+| `2`    | webp            | `image/webp`               |
+| `3`    | svg             | `image/svg+xml`            |
+| `4`    | avif            | `image/avif`               |
+| `5-11` | *unassigned*    |                            |
+| `12`   | geojson         | `application/geo+json`     |
+| `13`   | topojson        | `application/topo+json`    |
+| `14`   | json            | `application/json`         |
+| `15`   | raw binary data | `application/octet-stream` |
+| `16`   | pbf             | `application/x-protobuf`   |
 
 ### `tile_precompression` values:
-  - `0`: uncompressed
-  - `1`: gzip compressed
-  - `2`: brotli compressed
+
+| value  | compression     | 
+| ------ | --------------- | 
+| `0`    | uncompressed    |
+| `1`    | gzip            |
+| `2`    | brotli          |
 
 ### `meta`
 
